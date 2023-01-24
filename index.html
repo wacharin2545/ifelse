@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <img src="me.jpg" width="200px">
+    <h1>Wacharin Koonyotying</h1>
+    <h2>กรุณากรอกคะแนนของคุณ</h2>
+    <input type="text" id="name">
+    <button onclick="checkinput()">SUBMIT</button>
+    <p id="demo"></p>
+</body>
+<script>
+    function checkinput(){
+        var input = document.getElementById("name").value;
+        if (input === "100"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต A";
+        } else if (input >= "80"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต A";
+        } else if (input >= "75") {
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต B+";
+        } else if (input >= "70"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต B";
+        } else if (input >= "65"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต C+";
+        } else if (input >= "60"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต C";
+        } else if (input >= "55"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต D+";
+        } else if (input >= "50"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต D";
+        } else if (input == "0"){
+            document.getElementById("demo").innerHTML = "คะแนนของคุณ" + input + "คุณได้เกรต E";
+        } else {
+            document.getElementById("demo").innerHTML = "ไม่มีข้อมูล" ;
+        }
+    }
+</script>
+</html>
